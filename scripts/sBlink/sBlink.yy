@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"sBlink",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"sBlink",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

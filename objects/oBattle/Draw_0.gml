@@ -1,0 +1,1 @@
+draw_sprite(sBattleground,0,x,y)

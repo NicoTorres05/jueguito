@@ -1,0 +1,1 @@
+NewEncounter([global.enemies.temmie, global.enemies.temmie], sBattleground)
