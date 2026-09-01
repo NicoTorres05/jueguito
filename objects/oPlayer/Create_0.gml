@@ -7,6 +7,8 @@ can_move = true;
 
 movespd = 1;
 
+dashing = false;
+
 walk_spd = 1.4;
 run_spd = 2.8;
 

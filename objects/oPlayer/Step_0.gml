@@ -2,9 +2,49 @@ rightKey = keyboard_check(vk_right) or keyboard_check(ord("D"));
 leftKey = keyboard_check(vk_left) or keyboard_check(ord("A"));
 upKey = keyboard_check(vk_up) or keyboard_check(ord("W"));
 downKey = keyboard_check(vk_down) or keyboard_check(ord("S"));
+restart = keyboard_check(ord("R"))
 
 
 
+
+if keyboard_check_pressed(vk_space) {
+	dtx = x;
+	dty = y;
+	
+	if sprite_index == sPlayerLeftWalk {
+	dtx += 64
+	}
+	if sprite_index == sPlayerRightWalk {
+	dtx -= 64
+	}
+	if sprite_index == sPlayerUpWalk {
+	dty -= 64
+	}
+	if sprite_index == sPlayerDownWalk {
+	dty += 64
+	}
+	
+	dashing = true;
+}
+
+if (dashing) {
+	x = lerp(x, dtx, 0.2);
+	y = lerp(y, dty, 0.2);
+	
+	if (point_distance(x, y, dtx, dty) < 1) {
+		x = dtx;
+		y = dty;
+		dashing = false
+	
+	}
+
+}
+
+if restart {
+	oPlayer.x = 32
+	oPlayer.y = 32
+
+}
 
 
 
